@@ -581,7 +581,6 @@ table {
   height: 350px;
 }
 .map:after {
-  content: " ";
   position: absolute;
   top: 0;
   left: 0;

@@ -57,6 +57,8 @@ body {
 
 a {
   background: transparent;
+  color: #152559;
+  text-decoration: none;
 }
 a:focus {
   outline: thin dotted;
@@ -2237,7 +2239,7 @@ body {
   padding: 30px 0;
   display: block;
   text-decoration: none;
-  color: inherit;
+  color: rgb(184, 184, 184);
   font-weight: 300;
   position: relative;
   border-bottom: 1px solid transparent;

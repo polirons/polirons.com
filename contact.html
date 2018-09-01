@@ -94,18 +94,27 @@
 											</p>
 									</address>
 								</div>
+
+								<div class="col-md-9">									
+									<div class="success-msg" hidden>
+										<i class="fa fa-check"></i>
+										Mesajınız tarafımıza ulaşmıştır. Size en kısa zamanda geri dönüş yapılacaktır.
+									</div>
+								</div>
+
+
 								<div class="col-md-9">
 									<h1 class="wow fadeInRight">İletişim Formu</h1>
-									<form action="mailto:info@polirons.com">
+									<form action="">
 										<div class="row">
 											<div class="col-md-4">
-												<p class="wow fadeInRight"><input type="text" placeholder="Adınız..."></p>
-												<p class="wow fadeInRight"><input type="text" placeholder="Firma Adınız..."></p>
-												<p class="wow fadeInRight"><input type="email" placeholder="E-Posta Adresiniz..."></p>
+												<p class="wow fadeInRight"><input name="name" id="name" type="text" required placeholder="Adınız..."></p>
+												<p class="wow fadeInRight"><input name="company" id="company" type="text" required placeholder="Firma Adınız..."></p>
+												<p class="wow fadeInRight"><input name="email" id="email" type="email" required placeholder="E-Posta Adresiniz..."></p>
 											</div>
 											<div class="col-md-8">
-												<p class="wow fadeInRight"><textarea name="" id=""></textarea></p>
-												<input type="submit" class="button pull-right wow fadeInRight" value="Yolla">
+												<p class="wow fadeInRight"><textarea id="message"></textarea></p>
+												<input type="submit" class="button pull-right wow fadeInRight" value="Yolla"><i class="fa fa-spinner fa-spin" hidden></i>
 											</div>
 										</div>
 									</form>
@@ -160,6 +169,45 @@
 		<script src="js/plugins.js"></script>
 		<script src="js/app.js"></script>
 		
+		<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+		<script type="text/javascript">
+		   (function(){
+			  emailjs.init("user_tVCIf8tII8U8dRlenNq2w");
+		   })();
+
+		   var sending = false;
+
+
+			$("form").submit(function(e){
+				e.preventDefault();
+
+				if (!sending) {
+					sending = true;
+					$(".fa-spinner").show();
+					var templateParams = {
+						from_name: $("#name").val(),
+						message: $("#message").val(),
+						company: $("#company").val(),
+						reply_to: $("#email").val()
+					};
+	
+					emailjs.send('gmail', 'template_rD0NaiAc', templateParams)
+						.then(function(response) {
+							sending = false;
+							$(".fa-spinner").hide();
+							$(".success-msg").show();
+						}, function(error) {
+							sending = false;
+							$(".fa-spinner").hide();
+							$(".success-msg").show();
+						});
+				}
+
+			});
+
+
+		</script>
+
 	</body>
 
 </html>

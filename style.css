@@ -2074,7 +2074,7 @@ form textarea {
 }
 body {
   position: relative;
-  font-family: "Roboto Slab", serif;
+  font-family: "Helvetica", serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 30px;
@@ -2595,4 +2595,9 @@ hr.spacer {
 .error-msg {
   color: #D8000C;
   background-color: #FFBABA;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 12px;
 }

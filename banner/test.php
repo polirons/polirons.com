@@ -36,7 +36,7 @@ $im = imagecreate(500, 250);
 // Beyaz artalan üstüne mavi metin
 $bg = imagecolorallocate($im, 255, 255, 255);
 $textcolor = imagecolorallocate($im, 0, 0, 0);
-$font = imageloadfont('Bellefair-Regular.ttf');
+$font = './Bellefair-Regular.ttf';
 //$grey = imagecolorallocate($im, 128, 128, 128);
 
 // Dizgeyi resmin sol üst tarafına yazalım
@@ -57,7 +57,7 @@ if (isset($_GET['name']) && isset($persons[$_GET['name']])) {
          * 
          */
 
-        imagettftext($im, 13, 0, 5, $startY, $textcolor, 'Bellefair-Regular.ttf', $value);
+        imagettftext($im, 13, 0, 5, $startY, $textcolor, $font, $value);
 
 
        // imagestring($im, 5, 5, $startY, properText($value), $textcolor);

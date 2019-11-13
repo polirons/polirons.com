@@ -27,6 +27,12 @@ $persons = [
         '+90850 303 7576',
         '+90552 277 7576',
         'www.polirons.com'
+    ],
+    'mehmet.acan' => [
+        'Mehmet Açan',
+        'Elektrik-Elektronik Mühdenisi/ Electrical & Electronic Engineer',
+        '+90850 303 7576',
+        'www.polirons.com'
     ]
 ];
 

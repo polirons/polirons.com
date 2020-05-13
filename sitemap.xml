@@ -42,4 +42,8 @@
     <loc>http://www.polirons.com/products/polimine-otp.html</loc>
     <priority>1</priority>
   </url>
+  <url>
+    <loc>http://www.polirons.com/products/poliwipe-id.html</loc>
+    <priority>1</priority>
+  </url>
 </urlset>

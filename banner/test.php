@@ -30,7 +30,7 @@ $persons = [
     ],
     'mehmet.acan' => [
         'Mehmet Açan',
-        'Elektrik-Elektronik Mühdenisi/ Electrical & Electronic Engineer',
+        'Elektrik-Elektronik Mühendisi/ Electrical & Electronic Engineer',
         '+90850 303 7576',
         'www.polirons.com'
     ]

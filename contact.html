@@ -210,7 +210,8 @@
 						from_name: $("#name").val(),
 						message: $("#message").val(),
 						company: $("#company").val(),
-						reply_to: $("#email").val()
+            reply_to: $("#email").val(),
+            recaptcha_response: grecaptcha.getResponse()
 					};
 
           $.post('/mail.php', templateParams)

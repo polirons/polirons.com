@@ -25,7 +25,6 @@ function callAPI($method, $url, $data){
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
    curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
    // EXECUTE:
-   var_dump($data);
    $result = curl_exec($curl);
    if(!$result){die("Connection Failure");}
    curl_close($curl);

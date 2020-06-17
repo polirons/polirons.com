@@ -7,14 +7,10 @@ if (isset($_POST['from_name']) && isset($_POST['message']) && isset($_POST['comp
   require("helper.php");
 
   $reCaptchaSecret = getenv('GRECAPTCHA_SECRET');
-  $reCaptchaData = array(
-    "secret" => $reCaptchaSecret,
-    "response" => $_POST['recaptcha_response']
-  );
 
-  
-  $reCaptchaResponse = json_decode(callAPI('POST', 'https://www.google.com/recaptcha/api/siteverify', $reCaptchaData));
-  if ($reCaptchaResponse->success) {
+  $reCaptchaResponse = gcaptchaVerify($reCaptchaSecret, $_POST['recaptcha_response'], $_SERVER['REMOTE_ADDR']);
+
+  if ($reCaptchaResponse['success']) {
     $fromName = $_POST['from_name'];
     $message = $_POST['message'];
     $company = $_POST['company'];
@@ -46,21 +42,21 @@ if (isset($_POST['from_name']) && isset($_POST['message']) && isset($_POST['comp
     $mail->Body = $message;
   
     if(!$mail->Send()) {
-      http_response_code(500);
+      http_response_code(401);
       echo $mail->ErrorInfo;
       exit;
     } else {
       http_response_code(200);
-      echo "E-Posta başarıyla gönderildi";
+      var_dump("E-Posta barıyla gönderild");
       exit;
     }
   } else {
     http_response_code(500);
-    echo "Lütfen robot olmadığınızı onaylayın";
+    var_dump("Lütfen robot olmaiginiz� onaylayın");
   }
 } else {
-  http_response_code(500);
-  echo "Tüm alanların doldurulması zorunludur";
+  http_response_code(402);
+  var_dump("Tüm alanların doldurulması zorunludur");
 }
  
 ?>

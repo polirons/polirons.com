@@ -31,4 +31,35 @@ function callAPI($method, $url, $data){
    return $result;
 }
 
+function gcaptchaVerify($secret, $response, $remoteip = '') {
+  $url = "https://www.google.com/recaptcha/api/siteverify";
+
+  $post_data = http_build_query(
+      array(
+          'secret' => $secret,
+          'response' => $response,
+          'remoteip' => $remoteip
+      )
+  );  
+
+  $options=array(
+
+      // If site has SSL then
+
+    'http' =>
+      array(
+          'method'  => 'POST',
+          'header'  => 'Content-type: application/x-www-form-urlencoded',
+          'content' => $post_data
+      )
+  );
+
+  $context = stream_context_create( $options );   
+
+  $result_json = file_get_contents( $url, false, $context );
+  $resulting = json_decode($result_json, true);
+
+  return $resulting;
+}
+
 ?>

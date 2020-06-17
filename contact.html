@@ -214,7 +214,7 @@
             recaptcha_response: grecaptcha.getResponse()
 					};
 
-          $.post('/mail.php', templateParams)
+          $.post('/backend/mail.php', templateParams)
             .success(function() {
 							sending = false;
 							$(".fa-spinner").hide();

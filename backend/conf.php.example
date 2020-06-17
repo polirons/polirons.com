@@ -1,0 +1,10 @@
+<?php
+
+putenv("MAIL_TO=info@polirons.com");
+putenv("MAIL_USER=mail.sender@polirons.com");
+putenv("MAIL_PASSWORD=strongpwd");
+putenv("MAIL_HOST=smtp.host.com");
+putenv("MAIL_SMTP_PORT=587");
+putenv("GRECAPTCHA_SECRET=securekey");
+
+?>

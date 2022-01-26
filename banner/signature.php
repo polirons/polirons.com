@@ -9,21 +9,21 @@ function properText($text){
 $persons = [
     'maydemirx' => [
         'Mehmet AYDEMİR',
-        'Kurucu Ortak / Founder',
+        'Kurucu Ortak / Co-Founder',
         '+90850 303 7576',
         '+90552 279 7576',
         'www.polirons.com'
     ],
     'ozgur.keles' => [
         'Özgür KELEŞ',
-        'Kurucu Ortak / Founder',
+        'Kurucu Ortak / Co-Founder',
         '+90850 303 7576',
         '+90552 278 7576',
         'www.polirons.com'
     ],
     'safa.sezgin' => [
         'Safa SEZGİN',
-        'Kurucu Ortak / Founder',
+        'Kurucu Ortak / Co-Founder',
         '+90850 303 7576',
         '+90552 277 7576',
         'www.polirons.com'
@@ -31,6 +31,18 @@ $persons = [
     'mehmet.acan' => [
         'Mehmet Açan',
         'Elektrik-Elektronik Mühendisi/ Electrical & Electronic Engineer',
+        '+90850 303 7576',
+        'www.polirons.com'
+    ],
+    'ege.evirgen' => [
+        'Ege Evirgen',
+        'Elektrik-Elektronik Mühendisi/ Electrical & Electronic Engineer',
+        '+90850 303 7576',
+        'www.polirons.com'
+    ],
+    'meryem.cicek' => [
+        'Meryem Çiçek',
+        'Ön Muhasebe/ Pre-Accounting',
         '+90850 303 7576',
         'www.polirons.com'
     ]

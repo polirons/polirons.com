@@ -2601,3 +2601,9 @@ blockquote {
   font-style: italic;
   font-size: 12px;
 }
+
+.lang-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 3px;
+}

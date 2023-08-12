@@ -2102,6 +2102,11 @@ body {
   text-decoration: none;
 }
 
+.top-header a:hover {
+  color: #01a6d4;
+  text-decoration: none;
+}
+
 .member-navigation .fa {
   margin-right: 5px;
 }

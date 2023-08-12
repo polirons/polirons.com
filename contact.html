@@ -124,7 +124,7 @@
 											</div>
 											<div class="col-md-8">
 												<p class="wow fadeInRight"><textarea id="message"></textarea></p>
-												<input type="submit" class="button pull-right wow fadeInRight" value="Yolla"><i class="fa fa-spinner fa-spin" hidden></i>
+												<input type="submit" class="button pull-right wow fadeInRight" value="Yolla"><i class="fa fa-spinner fa-spin" ></i>
 											</div>
 										</div>
                   </form>
@@ -133,11 +133,11 @@
                   </form>
 								</div>
 									</div>							
-									<div class="success-msg" hidden>
+									<div class="success-msg" >
 										<i class="fa fa-check"></i>
 										Mesajınız tarafımıza ulaşmıştır. Size en kısa zamanda geri dönüş yapılacaktır.
                   </div>
-                  <div class="error-msg" hidden>
+                  <div class="error-msg" >
 										<i class="fa fa-exclamation-circle"></i>
 										E-Posta gönderilirken bir hata oluştu. Lütfen tekrar deneyin.
 									</div>
@@ -197,9 +197,11 @@
 		<script type="text/javascript">
 		   
       var sending = false;
-      $('.success-message').hide();
-      $('.error-message').hide();
-
+	  $(document).ready(function() {
+		  $('.success-msg').hide();
+		  $('.error-msg').hide();
+		  $(".fa-spinner").hide();
+	  });
 
 			$("form").submit(function(e){
 				e.preventDefault();

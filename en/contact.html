@@ -129,7 +129,7 @@
 											</div>
 											<div class="col-md-8">
 												<p class="wow fadeInRight"><textarea id="message"></textarea></p>
-												<input type="submit" class="button pull-right wow fadeInRight" value="Send"><i class="fa fa-spinner fa-spin" hidden></i>
+												<input type="submit" class="button pull-right wow fadeInRight" value="Send"><i class="fa fa-spinner fa-spin" ></i>
 											</div>
 										</div>
                   </form>
@@ -138,12 +138,12 @@
                   </form>
 								</div>
 							</div>
-							<div class="col-md-9">									
-									<div class="success-msg" hidden>
+							<div class="col-md-12">									
+									<div class="success-msg">
 										<i class="fa fa-check"></i>
 										Your message has been received. We will get back to you as soon as possible.
                   </div>
-                  <div class="error-msg" hidden>
+                  <div class="error-msg">
 										<i class="fa fa-exclamation-circle"></i>
 										An error occurred while sending the e-mail. Please try again.
 									</div>
@@ -167,7 +167,7 @@
 								<h1 class="site-title">Polirons</h1> 
 							</div> <!-- .branding -->
 
-							<p class="copy">Copyright 2018 Polirons Teknoloji. All rights reserved</p>
+							<p class="copy">Copyright 2023 Polirons. All rights reserved</p>
 						</div>
 						
 						<div class="col-md-7 align-right">
@@ -201,8 +201,12 @@
 		<script type="text/javascript">
 		   
       var sending = false;
-      $('.success-message').hide();
-      $('.error-message').hide();
+
+	  $(document).ready(function() {
+		  $('.success-msg').hide();
+		  $('.error-msg').hide();
+		  $(".fa-spinner").hide();
+	  });
 
 
 			$("form").submit(function(e){

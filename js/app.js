@@ -1,6 +1,9 @@
 (function($, document, window){
 
 	$(document).ready(function(){
+		var currentYear = new Date().getFullYear();
+		var copyrightText = "Copyright © " + currentYear + " Polirons. All rights reserved.";
+		$(".copy").text(copyrightText);
 		$(".slider").flexslider({
 			animation: "fade",
 			controlNav: true,
